@@ -13,7 +13,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "1.11.0",
     "@nuxt/ui": "3.0.0",
     "@tailwindcss/vite": "^4.0.14",
     "@vue-vine/nuxt": "0.2.19",
@@ -23,6 +22,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.319",
     "@nuxt/eslint": "^1.2.0",
     "eslint": "^9.22.0",
     "prettier": "^3.5.3",

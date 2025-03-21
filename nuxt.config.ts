@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxt/ui', '@vue-vine/nuxt'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@vue-vine/nuxt'],
 
   ui: {
     fonts: false,
