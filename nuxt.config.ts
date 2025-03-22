@@ -17,13 +17,24 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@vue-vine/nuxt'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n', '@vue-vine/nuxt'],
 
   ui: {
     fonts: false,
   },
-
   colorMode: {
     preference: 'dark',
+  },
+  i18n: {
+    lazy: true,
+    strategy: 'prefix_except_default',
+    defaultLocale: 'zh_cn',
+    locales: [
+      { code: 'zh_cn', language: 'zh-CN', file: 'zh_cn.json' },
+      { code: 'en', language: 'en', file: 'en.json' },
+    ],
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 });
