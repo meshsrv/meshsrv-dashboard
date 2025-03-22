@@ -1,2 +1,26 @@
 @import 'tailwindcss';
 @import '@nuxt/ui';
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@theme inline {
+  --color-fg: var(--ui-text);
+  --color-bg: var(--ui-bg);
+}
+
+@theme {
+  --animate-appear: appear 500ms ease-in-out;
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
