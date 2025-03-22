@@ -13,7 +13,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/ui": "3.0.0",
+    "@nuxt/ui": "^3.0.1",
     "@nuxtjs/i18n": "^9.3.4",
     "@tailwindcss/vite": "^4.0.15",
     "@vue-vine/nuxt": "0.2.19",
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.319",
     "@nuxt/eslint": "^1.2.0",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
