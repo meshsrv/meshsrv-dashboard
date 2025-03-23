@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import clsx from 'clsx';
 
-definePageMeta({ layout: 'homepage' });
+definePageMeta({
+  layout: 'homepage',
+  middleware: ['transition-slide'],
+});
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -10,7 +15,7 @@ definePageMeta({ layout: 'homepage' });
       <h2 class="whitespace-pre">{{ $t('home.slogan') }}</h2>
     </div>
 
-    <button
+    <NuxtLink
       :class="
         clsx(
           'flex-center gap-3 transition-all',
@@ -19,9 +24,10 @@ definePageMeta({ layout: 'homepage' });
           'bg-gray-500/20 hover:brightness-125 active:brightness-90'
         )
       "
+      :to="localePath('/login')"
     >
       {{ $t('home.login') }}
       <UIcon name="i-fa6-solid-arrow-right" />
-    </button>
+    </NuxtLink>
   </main>
 </template>
