@@ -5,8 +5,6 @@ definePageMeta({
   layout: 'homepage',
   middleware: ['transition-slide'],
 });
-
-const localePath = useLocalePath();
 </script>
 
 <template>
@@ -24,7 +22,7 @@ const localePath = useLocalePath();
           'bg-gray-500/20 hover:brightness-125 active:brightness-90'
         )
       "
-      :to="localePath('/login')"
+      to="/login"
     >
       {{ $t('home.login') }}
       <UIcon name="i-fa6-solid-arrow-right" />

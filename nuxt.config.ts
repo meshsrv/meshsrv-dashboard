@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     lazy: true,
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     defaultLocale: 'zh_cn',
     locales: [
       { code: 'zh_cn', language: 'zh-CN', file: 'zh_cn.json' },
