@@ -39,7 +39,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UIcon name="i-material-symbols-frame-person-rounded" class="w-full text-4xl" />
       <h1 class="text-center text-lg">{{ $t('login.title') }}</h1>
 
-      <UForm :schema="schema" :state="state" class="space-y-3" @submit="onSubmit">
+      <UForm :state="state" :schema="schema" :validate-on="[]" class="space-y-3" @submit="onSubmit">
         <UFormField :label="$t('login.username')" name="username">
           <UInput
             v-model="state.username"
