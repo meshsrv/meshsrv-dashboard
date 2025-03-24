@@ -10,7 +10,7 @@ const { meta } = useAppConfig();
       :class="
         clsx(
           'flex-center h-screen w-screen flex-col gap-3',
-          'from-primary-500/30 dark:from-primary-500/60 animate-appear bg-gradient-to-t'
+          'animate-appear bg-gradient-to-t from-primary-500/30 dark:from-primary-500/60'
         )
       "
     >
@@ -23,7 +23,7 @@ const { meta } = useAppConfig();
         </div>
       </header>
 
-      <div class="grow">
+      <div class="size-full grow">
         <slot />
       </div>
 
@@ -31,7 +31,7 @@ const { meta } = useAppConfig();
         <div>
           {{ `${meta.name} v${meta.version} - by ` }}
           <ULink
-            class="hover:text-primary-300 text-fg font-bold"
+            class="font-bold text-fg hover:text-primary-300"
             target="_blank"
             :to="meta.authorUrl"
           >
