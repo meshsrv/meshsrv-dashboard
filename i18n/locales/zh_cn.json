@@ -2,5 +2,13 @@
   "home": {
     "slogan": "强力驱动您的基础设施",
     "login": "登录"
+  },
+  "login": {
+    "title": "登录",
+    "username": "用户名",
+    "usernamePlaceholder": "请输入用户名",
+    "password": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "continue": "继续"
   }
 }
