@@ -9,7 +9,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "tailwindCSS.classAttributes": ["class", "ui"],
+  "tailwindCSS.classAttributes": ["class", "ui", "cls"],
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
     ["clsx\\(.*?\\)(?!\\])", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"],

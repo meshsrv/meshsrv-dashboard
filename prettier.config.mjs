@@ -9,7 +9,9 @@ const config = {
   printWidth: 100,
   trailingComma: 'es5',
   plugins: ['prettier-plugin-organize-imports', 'prettier-plugin-tailwindcss'],
-  tailwindFunctions: ['clsx', 'tv'],
+  tailwindStylesheet: './assets/css/main.css',
+  tailwindAttributes: ['cls'],
+  tailwindFunctions: ['clsx', 'tv', 'twMerge'],
 };
 
 export default config;
