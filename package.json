@@ -16,7 +16,7 @@
     "@nuxt/ui": "^3.0.1",
     "@nuxtjs/i18n": "^9.3.4",
     "@tailwindcss/vite": "^4.0.15",
-    "@vue-vine/nuxt": "0.2.19",
+    "@vue-vine/nuxt": "^0.2.19",
     "clsx": "^2.1.1",
     "nuxt": "^3.16.1",
     "tailwind-merge": "^3.0.2",
@@ -26,7 +26,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.319",
+    "@iconify/json": "^2.2.320",
     "@nuxt/eslint": "^1.2.0",
     "eslint": "^9.23.0",
     "prettier": "^3.5.3",
