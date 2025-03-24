@@ -10,7 +10,7 @@ const { meta } = useAppConfig();
       :class="
         clsx(
           'flex-center h-screen w-screen flex-col gap-3',
-          'animate-appear bg-gradient-to-t from-primary-500/30 dark:from-primary-500/60'
+          'animate-appear bg-gradient-to-t from-primary-500/30 dark:from-primary-600/30'
         )
       "
     >
