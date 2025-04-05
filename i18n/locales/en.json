@@ -3,6 +3,35 @@
     "slogan": "Supercharge\nyour infrastructure",
     "login": "Login"
   },
+  "setup": {
+    "stepper": [
+      {
+        "title": "Register",
+        "description": "Create an admin account"
+      },
+      {
+        "title": "Finish",
+        "description": "Start using Meshsrv"
+      }
+    ],
+    "signup": {
+      "title": "Sign up as admin",
+      "username": "Username",
+      "usernamePlaceholder": "Enter your username",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "continue": "Continue",
+      "toast": {
+        "title": "Success",
+        "desc": "Admin {username} registered successfully"
+      }
+    },
+    "done": {
+      "title": "You're all set!",
+      "desc": "You can now start to explore Meshsrv"
+    },
+    "backToHome": "Back to Home"
+  },
   "login": {
     "title": "Login",
     "username": "Username",

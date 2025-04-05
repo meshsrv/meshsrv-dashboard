@@ -3,6 +3,35 @@
     "slogan": "强力驱动您的基础设施",
     "login": "登录"
   },
+  "setup": {
+    "stepper": [
+      {
+        "title": "注册",
+        "description": "创建管理员账号"
+      },
+      {
+        "title": "完成",
+        "description": "开始体验 Meshsrv"
+      }
+    ],
+    "signup": {
+      "title": "管理员注册",
+      "username": "用户名",
+      "usernamePlaceholder": "请输入用户名",
+      "password": "密码",
+      "passwordPlaceholder": "请输入密码",
+      "continue": "继续",
+      "toast": {
+        "title": "注册成功",
+        "desc": "管理员 {username} 注册成功"
+      }
+    },
+    "done": {
+      "title": "一切就绪！",
+      "desc": "现在您可以开始探索 Meshsrv 了"
+    },
+    "backToHome": "返回主页"
+  },
   "login": {
     "title": "登录",
     "username": "用户名",
