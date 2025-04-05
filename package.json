@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "update:api": "openapi-typescript http://localhost:3090/swagger/json -o ./api/schema.d.ts",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -19,6 +20,7 @@
     "@vue-vine/nuxt": "^0.2.19",
     "clsx": "^2.1.1",
     "nuxt": "^3.16.1",
+    "openapi-fetch": "^0.13.5",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.15",
     "vue": "^3.5.13",
@@ -29,6 +31,7 @@
     "@iconify/json": "^2.2.320",
     "@nuxt/eslint": "^1.2.0",
     "eslint": "^9.23.0",
+    "openapi-typescript": "^7.6.1",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
