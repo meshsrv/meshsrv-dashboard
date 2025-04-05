@@ -11,6 +11,12 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    public: {
+      apiBase: '/api',
+    },
+  },
+
   ssr: false,
   hooks: {
     'prerender:routes': ({ routes }) => {
@@ -21,6 +27,15 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3090',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    },
   },
 
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n', '@vue-vine/nuxt'],
