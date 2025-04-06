@@ -38,6 +38,10 @@
     "usernamePlaceholder": "请输入用户名",
     "password": "密码",
     "passwordPlaceholder": "请输入密码",
-    "continue": "继续"
+    "continue": "继续",
+    "toast": {
+      "title": "登录成功",
+      "desc": "欢迎您，{username}"
+    }
   }
 }

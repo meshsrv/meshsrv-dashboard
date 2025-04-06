@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { FormSubmitEvent } from '@nuxt/ui';
 import { z } from 'zod';
+import { api } from '~/api/client';
 
 definePageMeta({
   layout: 'homepage',
@@ -18,10 +19,23 @@ const state = reactive<Partial<Schema>>({
   password: undefined,
 });
 
+const { t } = useI18n();
+const auth = useAuthStore();
 const toast = useToast();
+const router = useRouter();
+
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' });
-  console.log(event.data);
+  const { data } = await api.POST('/sign-in', {
+    body: event.data,
+  });
+  if (!data?.data?.token) return;
+  auth.sessionToken = data.data.token;
+  toast.add({
+    title: t('login.toast.title'),
+    description: t('login.toast.desc', { username: event.data.username }),
+    color: 'success',
+  });
+  router.push('/app');
 }
 </script>
 
