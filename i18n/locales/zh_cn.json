@@ -30,7 +30,7 @@
       "title": "一切就绪！",
       "desc": "现在您可以开始探索 Meshsrv 了"
     },
-    "backToHome": "返回主页"
+    "goToApp": "立即开始"
   },
   "login": {
     "title": "登录",

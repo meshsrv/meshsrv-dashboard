@@ -38,13 +38,14 @@ const state = reactive<Partial<Schema>>({
   password: undefined,
 });
 
+const auth = useAuthStore();
 const toast = useToast();
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   const { data } = await api.POST('/sign-up', {
     body: event.data,
   });
   if (!data?.data?.token) return;
-  // TODO: save token to pinia
+  auth.sessionToken = data.data.token;
   toast.add({
     title: t('setup.signup.toast.title'),
     description: t('setup.signup.toast.desc', { username: event.data.username }),
@@ -112,9 +113,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               'hover:-translate-y-0.5'
             )
           "
-          to="/"
+          to="/app"
         >
-          {{ $t('setup.backToHome') }}
+          {{ $t('setup.goToApp') }}
         </NuxtLink>
       </div>
     </Transition>

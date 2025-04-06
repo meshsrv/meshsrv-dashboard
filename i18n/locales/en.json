@@ -30,7 +30,7 @@
       "title": "You're all set!",
       "desc": "You can now start to explore Meshsrv"
     },
-    "backToHome": "Back to Home"
+    "goToApp": "Get started"
   },
   "login": {
     "title": "Login",
