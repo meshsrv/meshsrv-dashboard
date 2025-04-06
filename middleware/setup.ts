@@ -5,4 +5,8 @@ export default defineNuxtRouteMiddleware(async () => {
   if (data) {
     return navigateTo('/setup');
   }
+
+  if (useAuthStore().sessionToken) {
+    return navigateTo('/app');
+  }
 });
