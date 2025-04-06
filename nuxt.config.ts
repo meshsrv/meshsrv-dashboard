@@ -38,7 +38,14 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n', '@vue-vine/nuxt'],
+  modules: [
+    '@nuxt/eslint',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+    '@nuxt/ui',
+    '@nuxtjs/i18n',
+    '@vue-vine/nuxt',
+  ],
 
   ui: {
     fonts: false,
