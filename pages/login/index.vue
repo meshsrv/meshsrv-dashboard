@@ -41,7 +41,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
   <main class="flex-center size-full flex-col">
-    <UiCard cls="w-full max-w-sm gap-2 rounded-3xl bg-bg/50 p-8 shadow">
+    <MyCard cls="w-full max-w-sm gap-2 rounded-3xl bg-bg/50 p-8 shadow">
       <UButton
         class="absolute top-4 left-4 z-10"
         icon="i-material-symbols-arrow-back-rounded"
@@ -74,6 +74,6 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
         <UButton type="submit" class="mt-3" block loading-auto>{{ $t('login.continue') }}</UButton>
       </UForm>
-    </UiCard>
+    </MyCard>
   </main>
 </template>

@@ -60,7 +60,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     <UStepper v-model="step" class="my-16 w-full" disabled :items="items" />
 
     <Transition name="slide-left" mode="out-in">
-      <UiCard v-if="step === 0" cls="w-full max-w-sm gap-2 rounded-3xl bg-bg/50 p-8 shadow">
+      <MyCard v-if="step === 0" cls="w-full max-w-sm gap-2 rounded-3xl bg-bg/50 p-8 shadow">
         <UIcon name="i-material-symbols-person-shield-rounded" class="w-full text-4xl" />
         <h1 class="text-center text-lg">{{ $t('setup.signup.title') }}</h1>
 
@@ -93,7 +93,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             {{ $t('setup.signup.continue') }}
           </UButton>
         </UForm>
-      </UiCard>
+      </MyCard>
 
       <div v-else-if="step === 1" class="flex-center flex-col gap-2">
         <UIcon name="i-mingcute-certificate-fill" class="mb-4 text-7xl text-green-600" />
