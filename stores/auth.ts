@@ -27,5 +27,5 @@ export const useAuthStore = defineStore(
       logout,
     };
   },
-  { persist: { storage: piniaPluginPersistedstate.localStorage() } }
+  { persist: true }
 );

@@ -53,6 +53,9 @@ export default defineNuxtConfig({
     '@vue-vine/nuxt',
   ],
 
+  piniaPluginPersistedstate: {
+    storage: 'localStorage',
+  },
   ui: {
     fonts: false,
   },
