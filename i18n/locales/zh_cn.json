@@ -43,5 +43,17 @@
       "title": "登录成功",
       "desc": "欢迎您，{username}"
     }
+  },
+  "nav": {
+    "label_overview": "总览",
+    "serverList": "服务器列表"
+  },
+  "userMenu": {
+    "appearance": "外观",
+    "light": "明亮",
+    "dark": "暗黑",
+    "language": "语言",
+    "api": "API 文档",
+    "logout": "登出"
   }
 }

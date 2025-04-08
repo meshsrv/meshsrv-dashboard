@@ -43,5 +43,17 @@
       "title": "Login Success",
       "desc": "Welcome back, {username}"
     }
+  },
+  "nav": {
+    "label_overview": "Overview",
+    "serverList": "Server List"
+  },
+  "userMenu": {
+    "appearance": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "language": "Language",
+    "api": "API Documentation",
+    "logout": "Logout"
   }
 }
