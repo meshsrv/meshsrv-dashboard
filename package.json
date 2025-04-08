@@ -14,33 +14,33 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/ui": "^3.0.1",
-    "@nuxtjs/i18n": "^9.3.4",
+    "@nuxt/ui": "^3.0.2",
+    "@nuxtjs/i18n": "^9.5.3",
     "@pinia/nuxt": "^0.10.1",
-    "@tailwindcss/vite": "^4.0.15",
+    "@tailwindcss/vite": "^4.1.3",
     "@vue-vine/nuxt": "^0.2.19",
     "@vueuse/core": "^13.1.0",
     "@vueuse/nuxt": "^13.1.0",
     "clsx": "^2.1.1",
-    "nuxt": "^3.16.1",
+    "nuxt": "^3.16.2",
     "openapi-fetch": "^0.13.5",
     "pinia": "^3.0.1",
     "pinia-plugin-persistedstate": "^4.2.0",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.0.15",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "^4.1.3",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.320",
-    "@nuxt/eslint": "^1.2.0",
-    "eslint": "^9.23.0",
+    "@iconify/json": "^2.2.324",
+    "@nuxt/eslint": "^1.3.0",
+    "eslint": "^9.24.0",
     "openapi-typescript": "^7.6.1",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "typescript": "^5.8.2",
+    "typescript": "^5.8.3",
     "vue-tsc": "^2.2.8"
   }
 }
