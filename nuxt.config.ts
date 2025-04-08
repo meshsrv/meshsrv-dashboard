@@ -34,6 +34,11 @@ export default defineNuxtConfig({
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
         },
+        '/swagger': {
+          target: 'http://localhost:3090/swagger',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/swagger/, ''),
+        },
       },
     },
   },
