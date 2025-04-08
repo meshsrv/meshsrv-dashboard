@@ -6,11 +6,13 @@ import { api } from '~/api/client';
 
 definePageMeta({
   layout: 'homepage',
+  middleware: [
+    async () => {
+      const { data } = await api.GET('/is-uninitialized');
+      if (!data) return navigateTo('/');
+    },
+  ],
 });
-
-const router = useRouter();
-const { data } = await api.GET('/is-uninitialized');
-if (!data) router.replace('/');
 
 const { t } = useI18n();
 const items = computed<StepperItem[]>(() => [
