@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 definePageMeta({
   layout: 'homepage',
-  middleware: ['setup', 'transition-slide'],
+  middleware: ['home-redirect', 'transition-slide'],
 });
 </script>
 
