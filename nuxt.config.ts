@@ -49,6 +49,7 @@ export default defineNuxtConfig({
     'pinia-plugin-persistedstate/nuxt',
     '@nuxt/ui',
     '@nuxtjs/i18n',
+    '@vueuse/nuxt',
     '@vue-vine/nuxt',
   ],
 
