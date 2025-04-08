@@ -47,7 +47,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     body: event.data,
   });
   if (!data?.data?.token) return;
-  auth.sessionToken = data.data.token;
+  auth.login(data.data.token);
   toast.add({
     title: t('setup.signup.toast.title'),
     description: t('setup.signup.toast.desc', { username: event.data.username }),
