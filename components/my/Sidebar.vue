@@ -80,8 +80,8 @@ onUnmounted(stopResize);
     :class="
       clsx(
         twMerge(
-          'relative flex',
-          'shrink-0 flex-col',
+          'relative flex shrink-0 flex-col',
+          'transition-all',
           'bg-neutral-100/25 dark:bg-neutral-800/25',
           'border-r border-neutral-200 dark:border-neutral-800',
           'min-h-svh w-(--width)',
