@@ -7,13 +7,10 @@ const open = ref(false);
 
 <template>
   <div class="fixed inset-0 flex overflow-hidden">
-    <DashboardSidebar v-model:collapsed="collapsed" class="max-lg:hidden" />
+    <DashboardSidebar v-model:collapsed="collapsed" class="max-lg:hidden" resizable />
     <UDrawer v-model:open="open" direction="left">
       <template #content>
-        <DashboardSidebar
-          :resizable="false"
-          :ui="{ base: 'border-0 bg-transparent dark:bg-transparent' }"
-        />
+        <DashboardSidebar :ui="{ base: 'border-0 bg-transparent dark:bg-transparent' }" />
       </template>
     </UDrawer>
 

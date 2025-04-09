@@ -18,7 +18,7 @@ export interface SidebarProps {
 }
 
 const props = withDefaults(defineProps<SidebarProps>(), {
-  resizable: true,
+  resizable: false,
   minSize: 10,
   defaultSize: 15,
   maxSize: 20,
@@ -87,7 +87,7 @@ onUnmounted(stopResize);
           'min-h-svh w-(--width)',
           ui.base
         ),
-        { 'pointer-events-none': isResizing }
+        { 'pointer-events-none transition-none': isResizing }
       )
     "
     :style="{ '--width': `${width}rem`, minWidth: `${collapsedSize}rem` }"
