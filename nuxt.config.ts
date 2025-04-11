@@ -30,14 +30,15 @@ export default defineNuxtConfig({
     server: {
       proxy: {
         '/api': {
-          target: 'http://localhost:3090',
+          target: 'https://localhost:3090',
           changeOrigin: true,
+          secure: false,
           rewrite: (path) => path.replace(/^\/api/, ''),
         },
         '/swagger': {
-          target: 'http://localhost:3090/swagger',
+          target: 'https://localhost:3090',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/swagger/, ''),
+          secure: false,
         },
       },
     },
