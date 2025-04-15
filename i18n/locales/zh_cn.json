@@ -21,10 +21,7 @@
       "password": "密码",
       "passwordPlaceholder": "请输入密码",
       "continue": "继续",
-      "toast": {
-        "title": "注册成功",
-        "desc": "管理员 {username} 注册成功"
-      }
+      "toast": "管理员 {username} 注册成功"
     },
     "done": {
       "title": "一切就绪！",
@@ -39,10 +36,7 @@
     "password": "密码",
     "passwordPlaceholder": "请输入密码",
     "continue": "继续",
-    "toast": {
-      "title": "登录成功",
-      "desc": "欢迎您，{username}"
-    }
+    "toast": "欢迎您，{username}"
   },
   "nav": {
     "label_overview": "总览",

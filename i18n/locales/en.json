@@ -21,10 +21,7 @@
       "password": "Password",
       "passwordPlaceholder": "Enter your password",
       "continue": "Continue",
-      "toast": {
-        "title": "Success",
-        "desc": "Admin {username} registered successfully"
-      }
+      "toast": "Admin {username} registered successfully"
     },
     "done": {
       "title": "You're all set!",
@@ -39,10 +36,7 @@
     "password": "Password",
     "passwordPlaceholder": "Enter your password",
     "continue": "Continue",
-    "toast": {
-      "title": "Login Success",
-      "desc": "Welcome back, {username}"
-    }
+    "toast": "Welcome back, {username}"
   },
   "nav": {
     "label_overview": "Overview",

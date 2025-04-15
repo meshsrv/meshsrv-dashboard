@@ -48,9 +48,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   });
   if (!data?.data?.token) return;
   auth.login(data.data.token);
-  $toast.success(t('setup.signup.toast.title'), {
-    description: t('setup.signup.toast.desc', { username: event.data.username }),
-  });
+  $toast.success(t('setup.signup.toast', { username: event.data.username }));
   step.value++;
 }
 </script>

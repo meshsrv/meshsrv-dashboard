@@ -30,9 +30,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   });
   if (!data?.data?.token) return;
   auth.login(data.data.token);
-  $toast.success(t('login.toast.title'), {
-    description: t('login.toast.desc', { username: event.data.username }),
-  });
+  $toast.success(t('login.toast', { username: event.data.username }));
   router.push('/app');
 }
 </script>
