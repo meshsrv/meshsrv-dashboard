@@ -3,6 +3,13 @@ import clsx from 'clsx';
 
 const collapsed = ref(false);
 const open = ref(false);
+
+useWS('/notification', {
+  message(event) {
+    const msg = JSON.parse(event.data);
+    handleNotification(msg);
+  },
+});
 </script>
 
 <template>
