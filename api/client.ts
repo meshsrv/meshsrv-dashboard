@@ -18,7 +18,7 @@ api.use({
         return;
       }
       const msg = `${response.status} ${response.statusText}`;
-      useToast().add({ title: 'Error', description: msg, color: 'error' });
+      useNuxtApp().$toast.error(msg);
       return;
     }
 
@@ -26,7 +26,7 @@ api.use({
     const body = await response.clone().json();
     if (body.code != null && body.code !== 0) {
       const msg = body.msg ?? `Error ${body.code}`;
-      useToast().add({ title: 'Error', description: msg, color: 'error' });
+      useNuxtApp().$toast.error(msg);
     }
   },
 
@@ -34,6 +34,6 @@ api.use({
     let msg = 'Unknown error';
     if (error instanceof Error) msg = error.message;
     else if (typeof error === 'string') msg = error;
-    useToast().add({ title: 'Error', description: msg, color: 'error' });
+    useNuxtApp().$toast.error(msg);
   },
 });

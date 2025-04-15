@@ -19,9 +19,9 @@ const state = reactive<Partial<Schema>>({
   password: undefined,
 });
 
+const { $toast } = useNuxtApp();
 const { t } = useI18n();
 const auth = useAuthStore();
-const toast = useToast();
 const router = useRouter();
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
@@ -30,10 +30,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   });
   if (!data?.data?.token) return;
   auth.login(data.data.token);
-  toast.add({
-    title: t('login.toast.title'),
+  $toast.success(t('login.toast.title'), {
     description: t('login.toast.desc', { username: event.data.username }),
-    color: 'success',
   });
   router.push('/app');
 }

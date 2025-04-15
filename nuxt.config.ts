@@ -56,6 +56,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     '@vue-vine/nuxt',
+    'vue-sonner/nuxt',
   ],
 
   piniaPluginPersistedstate: {

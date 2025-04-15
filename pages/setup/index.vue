@@ -40,18 +40,16 @@ const state = reactive<Partial<Schema>>({
   password: undefined,
 });
 
+const { $toast } = useNuxtApp();
 const auth = useAuthStore();
-const toast = useToast();
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   const { data } = await api.POST('/sign-up', {
     body: event.data,
   });
   if (!data?.data?.token) return;
   auth.login(data.data.token);
-  toast.add({
-    title: t('setup.signup.toast.title'),
+  $toast.success(t('setup.signup.toast.title'), {
     description: t('setup.signup.toast.desc', { username: event.data.username }),
-    color: 'success',
   });
   step.value++;
 }
