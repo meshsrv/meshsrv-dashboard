@@ -40,7 +40,14 @@
   },
   "nav": {
     "label_overview": "Overview",
-    "serverList": "Server List"
+    "servers": "Servers",
+    "notifications": "Notifications",
+    "plugins": "Plugins",
+    "label_tools": "Tools",
+    "files": "File Manager",
+    "ssh": "SSH",
+    "label_dev": "Developer Tools",
+    "logs": "Logs"
   },
   "userMenu": {
     "appearance": "Appearance",

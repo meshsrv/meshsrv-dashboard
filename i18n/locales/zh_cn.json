@@ -40,7 +40,14 @@
   },
   "nav": {
     "label_overview": "总览",
-    "serverList": "服务器列表"
+    "servers": "服务器",
+    "notifications": "通知中心",
+    "plugins": "插件管理",
+    "label_tools": "工具",
+    "files": "文件管理",
+    "ssh": "SSH",
+    "label_dev": "开发者工具",
+    "logs": "日志"
   },
   "userMenu": {
     "appearance": "外观",

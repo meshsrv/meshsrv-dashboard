@@ -13,9 +13,42 @@ const items = computed<NavigationMenuItem[]>(() => [
     type: 'label',
   },
   {
-    label: t('nav.serverList'),
+    label: t('nav.servers'),
     icon: 'i-solar-server-2-bold',
     to: '/app',
+  },
+  {
+    label: t('nav.notifications'),
+    icon: 'i-solar-bell-bold',
+    to: '/app/notifications',
+  },
+  {
+    label: t('nav.plugins'),
+    icon: 'i-material-symbols-extension-rounded',
+    to: '/app/plugins',
+  },
+  {
+    label: t('nav.label_tools'),
+    type: 'label',
+  },
+  {
+    label: t('nav.files'),
+    icon: 'i-solar-folder-with-files-bold',
+    to: '/app/files',
+  },
+  {
+    label: t('nav.ssh'),
+    icon: 'i-solar-programming-bold',
+    to: '/app/ssh',
+  },
+  {
+    label: t('nav.label_dev'),
+    type: 'label',
+  },
+  {
+    label: t('nav.logs'),
+    icon: 'i-solar-document-text-bold',
+    to: '/app/logs',
   },
 ]);
 </script>
