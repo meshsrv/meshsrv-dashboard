@@ -4,7 +4,7 @@
  */
 
 export interface paths {
-    "/is-uninitialized": {
+    "/auth/is-uninitialized": {
         parameters: {
             query?: never;
             header?: never;
@@ -12,7 +12,7 @@ export interface paths {
             cookie?: never;
         };
         /** @description Check if the core server is uninitialized. Return true if there is no user in the database. */
-        get: operations["getIs-uninitialized"];
+        get: operations["getAuthIs-uninitialized"];
         put?: never;
         post?: never;
         delete?: never;
@@ -21,7 +21,7 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
-    "/sign-in": {
+    "/auth/sign-in": {
         parameters: {
             query?: never;
             header?: never;
@@ -30,14 +30,14 @@ export interface paths {
         };
         get?: never;
         put?: never;
-        post: operations["postSign-in"];
+        post: operations["postAuthSign-in"];
         delete?: never;
         options?: never;
         head?: never;
         patch?: never;
         trace?: never;
     };
-    "/sign-up": {
+    "/auth/sign-up": {
         parameters: {
             query?: never;
             header?: never;
@@ -47,21 +47,37 @@ export interface paths {
         get?: never;
         put?: never;
         /** @description NOTE: Currently only allow one user to sign up. */
-        post: operations["postSign-up"];
+        post: operations["postAuthSign-up"];
         delete?: never;
         options?: never;
         head?: never;
         patch?: never;
         trace?: never;
     };
-    "/user-info": {
+    "/server/list": {
         parameters: {
             query?: never;
             header?: never;
             path?: never;
             cookie?: never;
         };
-        get: operations["getUser-info"];
+        get: operations["getServerList"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/user/info": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["getUserInfo"];
         put?: never;
         post?: never;
         delete?: never;
@@ -82,7 +98,7 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
-    "getIs-uninitialized": {
+    "getAuthIs-uninitialized": {
         parameters: {
             query?: never;
             header?: never;
@@ -103,7 +119,7 @@ export interface operations {
             };
         };
     };
-    "postSign-in": {
+    "postAuthSign-in": {
         parameters: {
             query?: never;
             header?: never;
@@ -163,7 +179,7 @@ export interface operations {
             };
         };
     };
-    "postSign-up": {
+    "postAuthSign-up": {
         parameters: {
             query?: never;
             header?: never;
@@ -223,7 +239,61 @@ export interface operations {
             };
         };
     };
-    "getUser-info": {
+    getServerList: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        /** @default 0 */
+                        code: number;
+                        /** @default success */
+                        msg: string;
+                        data?: {
+                            id: string;
+                            spec: (string | number | boolean | null) | unknown[] | Record<string, never>;
+                            latestPing: Record<string, never>;
+                            latestReportOffline: Record<string, never> | null;
+                        }[];
+                    };
+                    "multipart/form-data": {
+                        /** @default 0 */
+                        code: number;
+                        /** @default success */
+                        msg: string;
+                        data?: {
+                            id: string;
+                            spec: (string | number | boolean | null) | unknown[] | Record<string, never>;
+                            latestPing: Record<string, never>;
+                            latestReportOffline: Record<string, never> | null;
+                        }[];
+                    };
+                    "text/plain": {
+                        /** @default 0 */
+                        code: number;
+                        /** @default success */
+                        msg: string;
+                        data?: {
+                            id: string;
+                            spec: (string | number | boolean | null) | unknown[] | Record<string, never>;
+                            latestPing: Record<string, never>;
+                            latestReportOffline: Record<string, never> | null;
+                        }[];
+                    };
+                };
+            };
+        };
+    };
+    getUserInfo: {
         parameters: {
             query?: never;
             header?: never;
@@ -245,6 +315,7 @@ export interface operations {
                         data?: {
                             id: number;
                             username: string;
+                            passwordHash?: null;
                             nickname: string | null;
                         };
                     };
@@ -256,6 +327,7 @@ export interface operations {
                         data?: {
                             id: number;
                             username: string;
+                            passwordHash?: null;
                             nickname: string | null;
                         };
                     };
@@ -267,6 +339,7 @@ export interface operations {
                         data?: {
                             id: number;
                             username: string;
+                            passwordHash?: null;
                             nickname: string | null;
                         };
                     };

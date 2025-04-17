@@ -8,7 +8,7 @@ definePageMeta({
   layout: 'homepage',
   middleware: [
     async () => {
-      const { data } = await api.GET('/is-uninitialized');
+      const { data } = await api.GET('/auth/is-uninitialized');
       if (!data) return navigateTo('/');
     },
   ],
@@ -43,7 +43,7 @@ const state = reactive<Partial<Schema>>({
 const { $toast } = useNuxtApp();
 const auth = useAuthStore();
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  const { data } = await api.POST('/sign-up', {
+  const { data } = await api.POST('/auth/sign-up', {
     body: event.data,
   });
   if (!data?.data?.token) return;

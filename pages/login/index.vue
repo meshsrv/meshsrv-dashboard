@@ -25,7 +25,7 @@ const auth = useAuthStore();
 const router = useRouter();
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  const { data } = await api.POST('/sign-in', {
+  const { data } = await api.POST('/auth/sign-in', {
     body: event.data,
   });
   if (!data?.data?.token) return;
