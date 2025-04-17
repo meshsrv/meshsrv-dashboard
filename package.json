@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "update:api": "openapi-typescript http://localhost:3090/swagger/json -o ./api/schema.d.ts --root-types --root-types-no-schema-prefix",
+    "update:api": "NODE_TLS_REJECT_UNAUTHORIZED=0 openapi-typescript https://localhost:3090/swagger/json -o ./api/schema.d.ts --root-types --root-types-no-schema-prefix",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
