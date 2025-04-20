@@ -21,7 +21,7 @@ useWS('/notification', {
       </template>
     </UDrawer>
 
-    <div class="relative flex flex-1 flex-col">
+    <div class="relative flex min-w-0 flex-1 flex-col">
       <div
         :class="
           clsx(
@@ -49,7 +49,7 @@ useWS('/notification', {
           class="lg:hidden"
           @click="open = !open"
         />
-        <p>测试</p>
+        <p>Meshsrv</p>
       </div>
 
       <div class="flex-1 overflow-auto p-4">
