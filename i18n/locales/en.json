@@ -38,6 +38,13 @@
     "continue": "Continue",
     "toast": "Welcome back, {username}"
   },
+  "ws": {
+    "status": {
+      "OPEN": "Connected",
+      "CLOSED": "Disconnected",
+      "CONNECTING": "Connecting"
+    }
+  },
   "nav": {
     "label_overview": "Overview",
     "servers": "Servers",

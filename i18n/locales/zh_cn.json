@@ -38,6 +38,13 @@
     "continue": "继续",
     "toast": "欢迎您，{username}"
   },
+  "ws": {
+    "status": {
+      "OPEN": "已连接",
+      "CLOSED": "连接断开",
+      "CONNECTING": "连接中"
+    }
+  },
   "nav": {
     "label_overview": "总览",
     "servers": "服务器",

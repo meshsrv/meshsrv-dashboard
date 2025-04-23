@@ -45,6 +45,8 @@ useTopic('notification', handleNotification);
           @click="open = !open"
         />
         <p>Meshsrv</p>
+
+        <MyWsIndicator class="ml-auto" />
       </div>
 
       <div class="flex-1 overflow-auto p-4">
