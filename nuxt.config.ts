@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: '/api',
-      // since both nitro devServer and vite server proxy have some issues
+      // FIXME: since both nitro devProxy and vite server proxy have some issues
       // with proxy websocket, we use wsBase instead.
       // override in dev env with NUXT_PUBLIC_WS_BASE.
       wsBase: '/ws',
