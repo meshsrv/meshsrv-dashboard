@@ -28,6 +28,20 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: '/app/plugins',
   },
   {
+    label: t('nav.label_rules'),
+    type: 'label',
+  },
+  {
+    label: t('nav.custom_events'),
+    icon: 'i-material-symbols-bigtop-updates-rounded',
+    to: '/app/events',
+  },
+  {
+    label: t('nav.automation'),
+    icon: 'i-solar-link-square-bold',
+    to: '/app/automation',
+  },
+  {
     label: t('nav.label_tools'),
     type: 'label',
   },
